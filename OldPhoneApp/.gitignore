@@ -1,0 +1,94 @@
+# Ignore Visual Studio temporary files, build results, and
+# package files.
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# User-specific files (Visual Studio Code)
+.vscode/
+.vscode/*
+
+# User-specific files (JetBrains Rider)
+.idea/
+.idea/*
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Folders for intermediate files
+obj/
+bin/
+
+# Visual Studio 2019
+.vs/
+
+# Rider
+.idea/
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# VS Code directories
+.history
+.ionide
+
+# DotNet core build results
+project.lock.json
+project.fragment.lock.json
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.history
+.ionide
+
+# Fody
+FodyWeavers.xsd
+
+# Yarn
+.yarn/
+.pnp.*
+
+# JetBrains Rider
+.idea/
+.idea/*
+
+# Crashlytics, Gradle, and other build tools
+crashlytics.properties
+fabric.properties
+**/build/
+
+# Others
+*.ide
+*.sketch
+*.pidb
+*.pidb.meta
