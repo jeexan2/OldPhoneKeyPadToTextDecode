@@ -1,11 +1,22 @@
 namespace PhoneKeyPad;
 
-public class NumKeyWithAlphaChar : PhoneKey 
+public class NumKeyWithAlphaChar : PhoneKey, IKeyPressFunc 
 {
-     public Dictionary<int, char> IndexToTextValue { get; set; }
+     public Dictionary<int, char> indexToTextValue { get; set; }
 
-    public NumKeyWithAlphaChar(char keyNumPad) : base(keyNumPad)
+     private IStringDictionaryBuilder stringDictionaryBuilder;
+
+    public NumKeyWithAlphaChar(char keyNumPad,
+            IStringDictionaryBuilder stringDictionaryBuilder_,
+            String keyText 
+        ) : base(keyNumPad)
     {
-        IndexToTextValue = new Dictionary<int, char>();
+        stringDictionaryBuilder = stringDictionaryBuilder_;
+        indexToTextValue = stringDictionaryBuilder.getStringWithIndex(keyText);
+    }
+
+     public void ExecuteBehavior(int pressingNumber, string currentWord)
+    {
+        // Implement the behavior here
     }
 }

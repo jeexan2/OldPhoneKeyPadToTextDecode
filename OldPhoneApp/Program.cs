@@ -12,119 +12,22 @@ using System.Text;
 class Program{
 
     static void Main(string[] args){
-        // #region DataPreProcssorForPhoneKeyMap 
-        // // Dictionary for key to char mapper
-        // Dictionary<String,String> keyNumStringMap = new Dictionary<String,String>();
-
-        // IList<String> buttons = new List<String>(){
-        //     "1",
-        //     "2",
-        //     "3",
-        //     "4",
-        //     "5",
-        //     "6",
-        //     "7",
-        //     "8",
-        //     "9",
-        //     "*",
-        //     "#"
-        // };
-
-        // Char endCharacterCursor = '#';
-
-        // IList<String> characterList = new List<String>(){
-        //     "&'(",
-        //     "ABC",
-        //     "DEF",
-        //     "GHI",
-        //     "JKL",
-        //     "MNO",
-        //     "PQRS",
-        //     "TUV",
-        //     "WXYZ",
-        //     "|x|",
-        //     "|=>|"
-        // };
-
-
-        // //TODO: Input validation between two list
-        // for(int i = 0; i < buttons.Count;i++){
-        //     keyNumStringMap.Add(buttons[i],characterList[i]);
-        // }
-
-        // // Testing KeyMap With Print
-        // //  foreach (var kvp in keyNumStringMap)
-        // // {
-        // //     Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
-        // // }
-        
-        // #endregion
-
-        // #region InputProcessor
-
-        // StringBuilder inputBuilder = new StringBuilder();
-        // while(true){
-        //     char inputChar = (char) Console.Read();
-        //     if(inputChar == endCharacterCursor) break;
-        //     inputBuilder.Append(inputChar);
-        // }    
-
-        // String userInput = inputBuilder.ToString();   
-        // #endregion
-
-        // #region InputProcessingToSplit
-
-        // String[] numLists = userInput.Split(' ');
-        
-        // #endregion
-
-        // #region NumPressToCharacterMapping
-        // // "*" means deletion of last Appeared Character
-        // IList<String> results = new List<String>();
-        // Char prevNumber='@';
-        // for(int i = 0; i < numLists.Length;i++){
-        //     int cnt = 0;
-        //     String word = "";
-        //     for(int j = 0; j < numLists[i].Length;j++){
-        //         if(j == 0) {
-        //             prevNumber = numLists[i][j];
-        //             cnt = 1;
-        //             continue;
-        //         }
-        //         if(prevNumber == numLists[i][j]) {
-        //             cnt++;
-        //         }
-        //         else {
-                    
-        //             if(numLists[i][j] == '*'){
-        //                 // Not enter the last character in word
-        //                 prevNumber = '@';
-        //                 cnt = 0;
-        //                 continue;
-        //             } 
-        //             String charList = keyNumStringMap[prevNumber.ToString()];
-        //             int index = cnt % charList.Length;
-        //             // Indexing to check the press number
-        //             word += charList[index];
-        //             prevNumber = numLists[i][j];
-        //             cnt = 1;
-        //         }
-
-        //         if(j == numLists[i].Length - 1){
-        //             results.Add(word);
-        //             word = "";
-        //             prevNumber = '@';
-        //             cnt = 0;
-        //         }
-        //     }
-        // }      
-
-        // #endregion 
-
+       
         // Testing creation
         IList<PhoneKey> phoneKeys = new List<PhoneKey>();
-
-        PhoneKey onePhoneKey = new NumKeyWithAlphaChar('1');
-        PhoneKey hashPhoneKey = new RemovePrevChar('#');
+        IStringDictionaryBuilder stringDictionaryBuilder = new StringDictionaryBuilder();
+        PhoneKey one = new NumKeyWithAlphaChar('1',stringDictionaryBuilder,"&;(");
+        PhoneKey two = new NumKeyWithAlphaChar('2',stringDictionaryBuilder,"abc");
+        PhoneKey three = new NumKeyWithAlphaChar('3',stringDictionaryBuilder,"def");
+        PhoneKey four = new NumKeyWithAlphaChar('4',stringDictionaryBuilder,"ghi");
+        PhoneKey five = new NumKeyWithAlphaChar('5',stringDictionaryBuilder,"jkl");
+        PhoneKey six = new NumKeyWithAlphaChar('6',stringDictionaryBuilder,"mno");
+        PhoneKey seven = new NumKeyWithAlphaChar('7',stringDictionaryBuilder,"pqrs");
+        PhoneKey eight = new NumKeyWithAlphaChar('8',stringDictionaryBuilder,"tuv");
+        PhoneKey nine = new NumKeyWithAlphaChar('9',stringDictionaryBuilder,"wxyz");
+        // TODO: Special Key check
+        PhoneKey hashPhoneKey = new RemovePrevChar('*');
+        PhoneKey spacePhoneKey = new SpaceChar(' ');
+        PhoneKey starPhoneKey  = new EndOfChar('#');
     }
 }

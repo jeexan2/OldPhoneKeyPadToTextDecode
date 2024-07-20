@@ -1,6 +1,6 @@
 namespace PhoneKeyPad;
 
-public class NumKeyWithExecBehavior : PhoneKey, KeyPressFunc
+public class NumKeyWithExecBehavior : PhoneKey, IKeyPressFunc
 {
     protected Boolean isAltBehaviour;
     public NumKeyWithExecBehavior(char keyNumPad) : base(keyNumPad)

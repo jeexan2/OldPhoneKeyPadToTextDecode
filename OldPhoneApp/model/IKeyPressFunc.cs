@@ -1,5 +1,5 @@
 namespace PhoneKeyPad;
 
-public interface KeyPressFunc{
+public interface IKeyPressFunc{
     void ExecuteBehavior(int pressingNumber,string currentWord);
 }
