@@ -95,14 +95,16 @@ class Program{
                    
                 }
                 else {
-                    // TODO: Complete the business logic
+                    
                     if(numLists[i][j] == '*'){
+                        // Not enter the last character in word
                         prevNumber = '@';
                         cnt = 0;
                         continue;
                     } 
                     String charList = keyNumStringMap[prevNumber.ToString()];
                     int index = cnt % charList.Length;
+                    // Indexing to check the press number
                     word += charList[index];
                     prevNumber = numLists[i][j];
                     cnt = 1;
