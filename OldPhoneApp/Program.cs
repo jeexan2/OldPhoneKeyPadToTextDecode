@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -77,20 +79,40 @@ class Program{
 
         #region NumPressToCharacterMapping
         // "*" means deletion of last Appeared Character
-        Char prevCharacter='@';
+        IList<String> results = new List<String>();
+        Char prevNumber='@';
         for(int i = 0; i < numLists.Length;i++){
             int cnt = 0;
             String word = "";
             for(int j = 0; j < numLists[i].Length;j++){
                 if(j == 0) {
-                    prevCharacter = numLists[i][j];
+                    prevNumber = numLists[i][j];
                     cnt = 1;
                     continue;
                 }
-                if(prevCharacter == numLists[i][j]) 
+                if(prevNumber == numLists[i][j]) {
                     cnt++;
+                   
+                }
                 else {
                     // TODO: Complete the business logic
+                    if(numLists[i][j] == '*'){
+                        prevNumber = '@';
+                        cnt = 0;
+                        continue;
+                    } 
+                    String charList = keyNumStringMap[prevNumber.ToString()];
+                    int index = cnt % charList.Length;
+                    word += charList[index];
+                    prevNumber = numLists[i][j];
+                    cnt = 1;
+                }
+
+                if(j == numLists[i].Length - 1){
+                    results.Add(word);
+                    word = "";
+                    prevNumber = '@';
+                    cnt = 0;
                 }
             }
         }      
