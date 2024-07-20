@@ -121,6 +121,10 @@ class Program{
 
         // #endregion 
 
-        
+        // Testing creation
+        IList<PhoneKey> phoneKeys = new List<PhoneKey>();
+
+        PhoneKey onePhoneKey = new NumKeyWithAlphaChar('1');
+        PhoneKey hashPhoneKey = new RemovePrevChar('#');
     }
 }
