@@ -91,7 +91,6 @@ class Program{
                 }
                 if(prevNumber == numLists[i][j]) {
                     cnt++;
-                   
                 }
                 else {
                     
