@@ -92,3 +92,4 @@ fabric.properties
 *.sketch
 *.pidb
 *.pidb.meta
+.config/
