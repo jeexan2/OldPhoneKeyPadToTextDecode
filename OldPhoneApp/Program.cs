@@ -76,7 +76,6 @@ class Program{
         
         #endregion
 
-
         #region NumPressToCharacterMapping
         // "*" means deletion of last Appeared Character
         IList<String> results = new List<String>();
