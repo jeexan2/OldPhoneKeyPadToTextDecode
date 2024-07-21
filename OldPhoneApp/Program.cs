@@ -16,18 +16,18 @@ class Program{
         // Testing creation
         IList<PhoneKey> phoneKeys = new List<PhoneKey>();
         IStringDictionaryBuilder stringDictionaryBuilder = new StringDictionaryBuilder();
-        PhoneKey one = new NumKeyWithAlphaChar('1',stringDictionaryBuilder,"&;(");
-        PhoneKey two = new NumKeyWithAlphaChar('2',stringDictionaryBuilder,"abc");
-        PhoneKey three = new NumKeyWithAlphaChar('3',stringDictionaryBuilder,"def");
-        PhoneKey four = new NumKeyWithAlphaChar('4',stringDictionaryBuilder,"ghi");
-        PhoneKey five = new NumKeyWithAlphaChar('5',stringDictionaryBuilder,"jkl");
-        PhoneKey six = new NumKeyWithAlphaChar('6',stringDictionaryBuilder,"mno");
-        PhoneKey seven = new NumKeyWithAlphaChar('7',stringDictionaryBuilder,"pqrs");
-        PhoneKey eight = new NumKeyWithAlphaChar('8',stringDictionaryBuilder,"tuv");
-        PhoneKey nine = new NumKeyWithAlphaChar('9',stringDictionaryBuilder,"wxyz");
-        // TODO: Special Key check
-        PhoneKey starPhoneKey = new RemovePrevChar('*');
-        PhoneKey spacePhoneKey = new SpaceChar(' ');
-        PhoneKey hashPhoneKey  = new EndOfChar('#');
+        var one = new NumKeyWithAlphaChar('1',stringDictionaryBuilder,"&;(");
+        var two = new NumKeyWithAlphaChar('2',stringDictionaryBuilder,"abc");
+        var three = new NumKeyWithAlphaChar('3',stringDictionaryBuilder,"def");
+        var four = new NumKeyWithAlphaChar('4',stringDictionaryBuilder,"ghi");
+        var five = new NumKeyWithAlphaChar('5',stringDictionaryBuilder,"jkl");
+        var six = new NumKeyWithAlphaChar('6',stringDictionaryBuilder,"mno");
+        var seven = new NumKeyWithAlphaChar('7',stringDictionaryBuilder,"pqrs");
+        var eight = new NumKeyWithAlphaChar('8',stringDictionaryBuilder,"tuv");
+        var nine = new NumKeyWithAlphaChar('9',stringDictionaryBuilder,"wxyz");
+        
+        var starPhoneKey = new RemovePrevChar('*');
+        var spacePhoneKey = new SpaceChar(' ');
+        var hashPhoneKey  = new EndOfChar('#');
     }
 }
