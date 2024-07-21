@@ -26,8 +26,8 @@ class Program{
         PhoneKey eight = new NumKeyWithAlphaChar('8',stringDictionaryBuilder,"tuv");
         PhoneKey nine = new NumKeyWithAlphaChar('9',stringDictionaryBuilder,"wxyz");
         // TODO: Special Key check
-        PhoneKey hashPhoneKey = new RemovePrevChar('*');
+        PhoneKey starPhoneKey = new RemovePrevChar('*');
         PhoneKey spacePhoneKey = new SpaceChar(' ');
-        PhoneKey starPhoneKey  = new EndOfChar('#');
+        PhoneKey hashPhoneKey  = new EndOfChar('#');
     }
 }
