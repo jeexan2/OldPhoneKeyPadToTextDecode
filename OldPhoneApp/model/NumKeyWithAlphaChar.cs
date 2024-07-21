@@ -15,8 +15,9 @@ public class NumKeyWithAlphaChar : PhoneKey, IKeyPressFunc
         indexToTextValue = stringDictionaryBuilder.getStringWithIndex(keyText);
     }
 
-     public void ExecuteBehavior(int pressingNumber, string currentWord)
+     public String ExecuteBehavior(int pressingNumber, string currentWord)
     {
         // Implement the behavior here
+        return "";
     }
 }

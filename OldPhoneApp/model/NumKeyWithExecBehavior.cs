@@ -8,9 +8,10 @@ public class NumKeyWithExecBehavior : PhoneKey, IKeyPressFunc
         isAltBehaviour = true;
     }
 
-    public void ExecuteBehavior(int pressingNumber, string currentWord)
+    public String ExecuteBehavior(int pressingNumber, string currentWord)
     {
         // Implement the behavior here
+        return "";
     }
 
 }

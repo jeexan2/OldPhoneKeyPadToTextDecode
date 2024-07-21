@@ -6,8 +6,8 @@ public class EndOfChar : NumKeyWithExecBehavior
     {
     }
 
-    public new void ExecuteBehavior(int pressingNumber, string currentWord)
+    public new String ExecuteBehavior(int pressingNumber, string currentWord)
     {
-        // Implement the specific behavior here
+        return currentWord;
     }
 }

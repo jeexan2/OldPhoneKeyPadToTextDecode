@@ -6,8 +6,12 @@ public class RemovePrevChar: NumKeyWithExecBehavior
     {
     }
 
-    public new void ExecuteBehavior(int pressingNumber, string currentWord)
+    public new String ExecuteBehavior(int pressingNumber, string currentWord)
     {
-        // Implement the specific behavior here
+        if(pressingNumber >= 1 && !string.IsNullOrEmpty(currentWord)){
+            currentWord = currentWord.Substring(0,currentWord.Length - pressingNumber);
+        }
+        
+        return currentWord;
     }
 }

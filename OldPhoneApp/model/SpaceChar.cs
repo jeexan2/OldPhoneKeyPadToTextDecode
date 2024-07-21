@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace PhoneKeyPad;
 
 public class SpaceChar : NumKeyWithExecBehavior
@@ -6,8 +8,10 @@ public class SpaceChar : NumKeyWithExecBehavior
     {
     }
 
-    public new void ExecuteBehavior(int pressingNumber, string currentWord)
+    public new String ExecuteBehavior(int pressingNumber, string currentWord)
     {
-        // Implement the specific behavior here
+        for(int i = 0; i < pressingNumber;i++)
+            currentWord += " ";
+        return currentWord;
     }
 }
